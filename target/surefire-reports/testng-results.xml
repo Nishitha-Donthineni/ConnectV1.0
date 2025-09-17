@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="3" passed="1" failed="2" skipped="0">
+<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-09-01T16:05:49 IST" name=" MasterSuite" finished-at="2025-09-01T16:07:51 IST" duration-ms="121637">
+  <suite started-at="2025-09-15T18:22:46 IST" name=" MasterSuite" finished-at="2025-09-15T18:25:12 IST" duration-ms="146171">
     <groups>
       <group name="Master">
         <method signature="TC_AddUser_01.createUser()[pri:0, instance:testCases.TC_AddUser_01@3a0baae5]" name="createUser" class="testCases.TC_AddUser_01"/>
@@ -17,9 +17,9 @@
         <method signature="TC_Addclient_01.createClients()[pri:0, instance:testCases.TC_Addclient_01@7ac0e420]" name="createClients" class="testCases.TC_Addclient_01"/>
       </group> <!-- Regression -->
     </groups>
-    <test started-at="2025-09-01T16:05:49 IST" name="ChromeTest" finished-at="2025-09-01T16:07:51 IST" duration-ms="121637">
+    <test started-at="2025-09-15T18:22:46 IST" name="ChromeTest" finished-at="2025-09-15T18:25:12 IST" duration-ms="146171">
       <class name="testCases.TC_Addclient_01">
-        <test-method is-config="true" signature="setup(java.lang.String,java.lang.String)[pri:0, instance:testCases.TC_Addclient_01@7ac0e420]" started-at="2025-09-01T16:07:01 IST" name="setup" finished-at="2025-09-01T16:07:09 IST" duration-ms="7245" status="PASS">
+        <test-method is-config="true" signature="setup(java.lang.String,java.lang.String)[pri:0, instance:testCases.TC_Addclient_01@7ac0e420]" started-at="2025-09-15T18:24:26 IST" name="setup" finished-at="2025-09-15T18:24:29 IST" duration-ms="2576" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -35,70 +35,17 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="createClients()[pri:0, instance:testCases.TC_Addclient_01@7ac0e420]" started-at="2025-09-01T16:07:09 IST" name="createClients" finished-at="2025-09-01T16:07:50 IST" duration-ms="41687" status="FAIL">
-          <exception class="org.openqa.selenium.TimeoutException">
-            <message>
-              <![CDATA[Expected condition failed: waiting for element to be clickable: [[ChromeDriver: chrome on windows (9a2771dde78fdedae6dc949a14f8420a)] -> xpath: //span[contains(text(),'Clients/Vendors')]] (tried for 5 second(s) with 500 milliseconds interval)
-Build info: version: '4.33.0', revision: '2c6aaad03a'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.3'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 139.0.7258.139, chrome: {chromedriverVersion: 139.0.7258.154 (9e0d6b2b47f..., userDataDir: C:\Users\Nishitha\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:55063}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:55063/devtoo..., se:cdpVersion: 139.0.7258.139, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 9a2771dde78fdedae6dc949a14f8420a]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: [[ChromeDriver: chrome on windows (9a2771dde78fdedae6dc949a14f8420a)] -> xpath: //span[contains(text(),'Clients/Vendors')]] (tried for 5 second(s) with 500 milliseconds interval)
-Build info: version: '4.33.0', revision: '2c6aaad03a'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.3'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 139.0.7258.139, chrome: {chromedriverVersion: 139.0.7258.154 (9e0d6b2b47f..., userDataDir: C:\Users\Nishitha\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:55063}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:55063/devtoo..., se:cdpVersion: 139.0.7258.139, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 9a2771dde78fdedae6dc949a14f8420a
-at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
-at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
-at pageObjects.ClientsPage.ClientsModule(ClientsPage.java:90)
-at testCases.TC_Addclient_01.createClients(TC_Addclient_01.java:30)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-at org.testng.TestRunner.privateRun(TestRunner.java:739)
-at org.testng.TestRunner.run(TestRunner.java:614)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-at org.testng.TestNG.runSuites(TestNG.java:1112)
-at org.testng.TestNG.run(TestNG.java:1079)
-at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:308)
-at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:71)
-at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:113)
-at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
-at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
-at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
-at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.TimeoutException -->
+        <test-method signature="createClients()[pri:0, instance:testCases.TC_Addclient_01@7ac0e420]" started-at="2025-09-15T18:24:29 IST" name="createClients" finished-at="2025-09-15T18:25:12 IST" duration-ms="43388" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- createClients -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:testCases.TC_Addclient_01@7ac0e420]" started-at="2025-09-01T16:07:50 IST" name="teardown" finished-at="2025-09-01T16:07:51 IST" duration-ms="236" status="PASS">
+        <test-method is-config="true" signature="teardown()[pri:0, instance:testCases.TC_Addclient_01@7ac0e420]" started-at="2025-09-15T18:25:12 IST" name="teardown" finished-at="2025-09-15T18:25:12 IST" duration-ms="453" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
       </class> <!-- testCases.TC_Addclient_01 -->
       <class name="testCases.TC_AddUser_01">
-        <test-method is-config="true" signature="setup(java.lang.String,java.lang.String)[pri:0, instance:testCases.TC_AddUser_01@3a0baae5]" started-at="2025-09-01T16:06:21 IST" name="setup" finished-at="2025-09-01T16:06:27 IST" duration-ms="5753" status="PASS">
+        <test-method is-config="true" signature="setup(java.lang.String,java.lang.String)[pri:0, instance:testCases.TC_AddUser_01@3a0baae5]" started-at="2025-09-15T18:23:45 IST" name="setup" finished-at="2025-09-15T18:23:47 IST" duration-ms="2904" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -114,59 +61,17 @@ at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="createUser()[pri:0, instance:testCases.TC_AddUser_01@3a0baae5]" started-at="2025-09-01T16:06:27 IST" name="createUser" finished-at="2025-09-01T16:07:01 IST" duration-ms="34315" status="FAIL">
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[null]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: null
-at org.testng.Assert.fail(Assert.java:111)
-at org.testng.Assert.fail(Assert.java:116)
-at testCases.TC_AddUser_01.createUser(TC_AddUser_01.java:67)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-at org.testng.TestRunner.privateRun(TestRunner.java:739)
-at org.testng.TestRunner.run(TestRunner.java:614)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-at org.testng.TestNG.runSuites(TestNG.java:1112)
-at org.testng.TestNG.run(TestNG.java:1079)
-at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:308)
-at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:71)
-at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:113)
-at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
-at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
-at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
-at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
+        <test-method signature="createUser()[pri:0, instance:testCases.TC_AddUser_01@3a0baae5]" started-at="2025-09-15T18:23:47 IST" name="createUser" finished-at="2025-09-15T18:24:26 IST" duration-ms="38021" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- createUser -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:testCases.TC_AddUser_01@3a0baae5]" started-at="2025-09-01T16:07:01 IST" name="teardown" finished-at="2025-09-01T16:07:01 IST" duration-ms="232" status="PASS">
+        <test-method is-config="true" signature="teardown()[pri:0, instance:testCases.TC_AddUser_01@3a0baae5]" started-at="2025-09-15T18:24:26 IST" name="teardown" finished-at="2025-09-15T18:24:26 IST" duration-ms="424" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
       </class> <!-- testCases.TC_AddUser_01 -->
       <class name="testCases.TC_Login_01">
-        <test-method is-config="true" signature="setup(java.lang.String,java.lang.String)[pri:0, instance:testCases.TC_Login_01@dbd8e44]" started-at="2025-09-01T16:05:49 IST" name="setup" finished-at="2025-09-01T16:05:54 IST" duration-ms="4886" status="PASS">
+        <test-method is-config="true" signature="setup(java.lang.String,java.lang.String)[pri:0, instance:testCases.TC_Login_01@dbd8e44]" started-at="2025-09-15T18:22:46 IST" name="setup" finished-at="2025-09-15T18:23:03 IST" duration-ms="16469" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -182,11 +87,11 @@ at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="Login()[pri:0, instance:testCases.TC_Login_01@dbd8e44]" started-at="2025-09-01T16:05:54 IST" name="Login" finished-at="2025-09-01T16:06:21 IST" duration-ms="26898" status="PASS">
+        <test-method signature="Login()[pri:0, instance:testCases.TC_Login_01@dbd8e44]" started-at="2025-09-15T18:23:03 IST" name="Login" finished-at="2025-09-15T18:23:44 IST" duration-ms="41103" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Login -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:testCases.TC_Login_01@dbd8e44]" started-at="2025-09-01T16:06:21 IST" name="teardown" finished-at="2025-09-01T16:06:21 IST" duration-ms="228" status="PASS">
+        <test-method is-config="true" signature="teardown()[pri:0, instance:testCases.TC_Login_01@dbd8e44]" started-at="2025-09-15T18:23:44 IST" name="teardown" finished-at="2025-09-15T18:23:45 IST" duration-ms="605" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->

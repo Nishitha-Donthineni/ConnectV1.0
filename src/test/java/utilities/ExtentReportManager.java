@@ -102,7 +102,7 @@ public class ExtentReportManager implements ITestListener
 		
 	}
 	
-	
+
 	public void onTestSkipped(ITestResult result) 
 	{
 		test = extent.createTest(result.getTestClass().getName());
