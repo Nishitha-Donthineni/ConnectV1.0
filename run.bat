@@ -1,3 +1,2 @@
-
-cd D:CONNECTV1.0
-mvn test
+cd /d D:\CONNECTV1.0
+mvn clean test
