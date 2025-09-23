@@ -37,76 +37,40 @@ import org.testng.annotations.Parameters;
 	
 	public Logger logger;	
 	public  Properties p;
-	
-	
-	 @BeforeClass(groups= {"Sanity","Regression","Master","Sanity2"},alwaysRun = true)
-	 @Parameters({"os","browser"})
-	 public	void setup(String os,String br) throws IOException 
-	 {
-		 
-		 //loading config.properties file
-	     
-		 FileReader file = new FileReader(System.getProperty("user.dir")+"/src/test/resources//Config.properties");
-		 p = new Properties();
-		 p.load(file);
-		 
-		logger=LogManager.getLogger(this.getClass());
-		
-		 String env = p.getProperty("execution_environment");
-		
-		/*if (env.equalsIgnoreCase("remote"))
-		
-		{
-			
-			DesiredCapabilities capabilities = new DesiredCapabilities();
-			
-			//OS
-			if(os.equalsIgnoreCase("windows"))
-			{
-				capabilities.setPlatform(Platform.WIN11);
-			}
-			else if (os.equalsIgnoreCase("linux"))
-			{
-				capabilities.setPlatform(Platform.LINUX);
-			}
-			
-			else if (os.equalsIgnoreCase("mac"))
-			{
-				capabilities.setPlatform(Platform.MAC);
-			}
-			else 
-			{
-				System.out.println("No matching OS");
-			 return;
-			}
-		
-			//browser
-			switch(br.toLowerCase())
-			{
-			case "chrome" :
-				capabilities.setBrowserName("chrome");
-			break;
-			case "edge"   : 
-				capabilities.setBrowserName("MicrosoftEdge");
-			break;
-			 case "firefox":
-                capabilities.setBrowserName("firefox"); 
-             break;
-			default: System.out.println("No matching browser");
-			return;
-	        }
-			
-			driver = new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"),capabilities);
+	@BeforeClass(groups= {"Sanity","Regression","Master","Sanity2"}, alwaysRun = true)
+	@Parameters({"os","browser"})
+	public void setup(String os, String br) throws IOException 
+	{
+	    // Load config.properties
+	    FileReader file = new FileReader(System.getProperty("user.dir") + "/src/test/resources/Config.properties");
+	    p = new Properties();
+	    p.load(file);
 
-		}*/
-		 if (env.equalsIgnoreCase("remote")) 
-		 {
-			    URL gridUrl = new URL("http://localhost:4444/wd/hub"); 
-			    // If tests run inside Docker, use: new URL("http://selenium-hub:4444/wd/hub")
+	    logger = LogManager.getLogger(this.getClass());
 
-			    switch (br.toLowerCase()) 
-			    {
-			    case "chrome":
+	    // Get environment from Jenkins/Maven parameter; default to 'qa' if not set
+        String env = System.getProperty("env", "qa"); // dev / qa / prod
+
+        // Get URL, email, and password for the selected environment
+        String url = p.getProperty(env + ".URL");
+        String email = p.getProperty(env + ".EmailId");
+        String password = p.getProperty(env + ".Password");
+
+        if (url == null || email == null || password == null) {
+            throw new IllegalArgumentException("Missing configuration for environment: " + env);
+        }
+
+        logger.info("URL: " + url);
+        logger.info("Email: " + email);
+
+	    // Get execution environment (local/remote)
+	    String executionEnv = p.getProperty("execution_environment");
+
+	    // Remote execution
+	    if (executionEnv.equalsIgnoreCase("remote")) {
+	        URL gridUrl = new URL("http://localhost:4444/wd/hub"); 
+	        switch (br.toLowerCase()) {
+	            case "chrome":
 	                driver = new RemoteWebDriver(gridUrl, new ChromeOptions());
 	                break;
 	            case "firefox":
@@ -115,51 +79,39 @@ import org.testng.annotations.Parameters;
 	            case "edge":
 	                driver = new RemoteWebDriver(gridUrl, new EdgeOptions());
 	                break;
-
-			        default:
-			            throw new IllegalArgumentException("Browser not supported: " + br);
-			    }
-		 }
-		if (env.equalsIgnoreCase("local"))
-	    {
-				switch(br.toLowerCase())
-			{
-			case "chrome" :
-				/* ChromeOptions chromeOptions = new ChromeOptions();
-                 Map<String, Object> chromePrefs = new HashMap<>();
-                 chromePrefs.put("credentials_enable_service", false);
-                 chromePrefs.put("profile.password_manager_enabled", false);
-                 chromeOptions.setExperimentalOption("prefs", chromePrefs);*/
-				driver= new ChromeDriver();
-			break;
-			case "edge"   : 
-				//System.setProperty("webdriver.edge.driver", "D:\\software\\new driver\\Latestdriver\\msedgedriver.exe");
-				System.setProperty("webdriver.edge.driver", "D:\\software\\new driver\\edgedriver\\msedgedriver.exe");
-				driver= new EdgeDriver();
-			break;
-			case "firefox":
-				
-				System.setProperty("webdriver.gecko.driver", "D:\\software\\new driver\\firefoxdriver\\geckodriver.exe");
-				driver= new FirefoxDriver();
-			break;
-			default: System.out.println("Invalid browser");
-			return;//Code does not execute if its invalid browser(Execution stops)
+	            default:
+	                throw new IllegalArgumentException("Browser not supported: " + br);
 	        }
-				
-				//driver = new RemoteWebDriver(new URL("http://172.16.10.195:4444/wd/hub"),capabilities);
-	     }
-		/* if (driver == null) 
-		 {
-		   throw new IllegalStateException("WebDriver not initialized. Check execution_environment and browser setup.");
-		 }*/
-		 
-			driver.manage().deleteAllCookies();
-			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
-		    driver.get(p.getProperty("URL"));
-			driver.manage().window().maximize();
-		
-		 
-	 }
+	    }
+
+	    // Local execution
+	    if (executionEnv.equalsIgnoreCase("local")) {
+	        switch (br.toLowerCase()) {
+	            case "chrome":
+	                driver = new ChromeDriver();
+	                break;
+	            case "edge":
+	                System.setProperty("webdriver.edge.driver", "D:\\software\\new driver\\edgedriver\\msedgedriver.exe");
+	                driver = new EdgeDriver();
+	                break;
+	            case "firefox":
+	                System.setProperty("webdriver.gecko.driver", "D:\\software\\new driver\\firefoxdriver\\geckodriver.exe");
+	                driver = new FirefoxDriver();
+	                break;
+	            default:
+	                throw new IllegalArgumentException("Invalid browser: " + br);
+	        }
+	    }
+
+	    // Browser setup
+	    driver.manage().deleteAllCookies();
+	    driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
+	    driver.get(url);
+	    driver.manage().window().maximize();
+	}
+
+	
+	
 	 
 	 
 	 @AfterClass(groups= {"Sanity","Regression","Master","Sanity2"},alwaysRun = true)
