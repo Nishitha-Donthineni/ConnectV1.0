@@ -14,9 +14,16 @@ public class TC_Login_01 extends BaseClass
 	 
 	 public void Login()
 	 {
+    	   String env = System.getProperty("env");
 		 LoginPage login = new LoginPage(driver);
-		 login.setUserName(p.getProperty("EmailId"));
-		 login.setpassword(p.getProperty("Password"));
+		 if (env == null || env.isEmpty()) 
+		 throw new IllegalArgumentException("Environment not specified. Pass it via -Denv=<dev|qa|prod>");
+		 String email = p.getProperty(env + ".EmailId");
+		 String password = p.getProperty(env + ".Password");
+		 if (email == null || password == null) 
+		 throw new IllegalArgumentException("Missing credentials for environment: " + env);
+		 login.setUserName(email);
+		 login.setpassword(password);
 		 login.LoginButton();
 	
 		String message= login.getConfirmationMsg();
