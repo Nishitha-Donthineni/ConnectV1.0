@@ -4,17 +4,17 @@
   <listeners>
     <listener class-name="utilities.ExtentReportManager"/>
   </listeners>
-  <test thread-count="5" parallel="tests" name="FirefoxTest(failed)">
+  <test thread-count="5" parallel="tests" name="ChromeTest(failed)">
     <parameter name="os" value="Linux"/>
-    <parameter name="browser" value="firefox"/>
+    <parameter name="browser" value="chrome"/>
     <classes>
-      <class name="testCases.TC_AssignProject_01">
+      <class name="testCases.TC_AddUser_01">
         <methods>
+          <include name="createUser"/>
           <include name="setup"/>
           <include name="teardown"/>
-          <include name="assignproject"/>
         </methods>
-      </class> <!-- testCases.TC_AssignProject_01 -->
+      </class> <!-- testCases.TC_AddUser_01 -->
     </classes>
-  </test> <!-- FirefoxTest(failed) -->
+  </test> <!-- ChromeTest(failed) -->
 </suite> <!-- Failed suite [Suite] -->
