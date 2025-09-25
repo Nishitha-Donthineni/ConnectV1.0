@@ -1,111 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="5" passed="4" failed="1" skipped="0">
+<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-09-19T15:58:55 IST" name="Suite" finished-at="2025-09-19T16:00:40 IST" duration-ms="105839">
+  <suite started-at="2025-09-25T15:34:33 IST" name="Suite" finished-at="2025-09-25T15:34:36 IST" duration-ms="2887">
     <groups>
       <group name="Master">
-        <method signature="TC_AddUser_01.createUser()[pri:0, instance:testCases.TC_AddUser_01@7b84fcf8]" name="createUser" class="testCases.TC_AddUser_01"/>
-        <method signature="TC_Login_01.Login()[pri:0, instance:testCases.TC_Login_01@5d9b7a8a]" name="Login" class="testCases.TC_Login_01"/>
-        <method signature="TC_Addclient_01.createClients()[pri:0, instance:testCases.TC_Addclient_01@5911e990]" name="createClients" class="testCases.TC_Addclient_01"/>
-        <method signature="TC_Login_01.Login()[pri:0, instance:testCases.TC_Login_01@2002348]" name="Login" class="testCases.TC_Login_01"/>
-        <method signature="TC_Login_01.Login()[pri:0, instance:testCases.TC_Login_01@1d470d0]" name="Login" class="testCases.TC_Login_01"/>
+        <method signature="TC_Login_01.Login()[pri:0, instance:testCases.TC_Login_01@1cdc4c27]" name="Login" class="testCases.TC_Login_01"/>
       </group> <!-- Master -->
       <group name="Sanity">
-        <method signature="TC_Login_01.Login()[pri:0, instance:testCases.TC_Login_01@5d9b7a8a]" name="Login" class="testCases.TC_Login_01"/>
-        <method signature="TC_Login_01.Login()[pri:0, instance:testCases.TC_Login_01@2002348]" name="Login" class="testCases.TC_Login_01"/>
-        <method signature="TC_Login_01.Login()[pri:0, instance:testCases.TC_Login_01@1d470d0]" name="Login" class="testCases.TC_Login_01"/>
+        <method signature="TC_Login_01.Login()[pri:0, instance:testCases.TC_Login_01@1cdc4c27]" name="Login" class="testCases.TC_Login_01"/>
       </group> <!-- Sanity -->
-      <group name="Regression">
-        <method signature="TC_AddUser_01.createUser()[pri:0, instance:testCases.TC_AddUser_01@7b84fcf8]" name="createUser" class="testCases.TC_AddUser_01"/>
-        <method signature="TC_Addclient_01.createClients()[pri:0, instance:testCases.TC_Addclient_01@5911e990]" name="createClients" class="testCases.TC_Addclient_01"/>
-      </group> <!-- Regression -->
     </groups>
-    <test started-at="2025-09-19T15:58:55 IST" name="FirefoxTest" finished-at="2025-09-19T15:59:20 IST" duration-ms="25423">
+    <test started-at="2025-09-25T15:34:33 IST" name="ChromeTest" finished-at="2025-09-25T15:34:36 IST" duration-ms="2887">
       <class name="testCases.TC_Login_01">
-        <test-method is-config="true" signature="setup(java.lang.String,java.lang.String)[pri:0, instance:testCases.TC_Login_01@1d470d0]" started-at="2025-09-19T15:58:55 IST" name="setup" finished-at="2025-09-19T15:59:07 IST" duration-ms="12305" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Linux]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[firefox]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method signature="Login()[pri:0, instance:testCases.TC_Login_01@1d470d0]" started-at="2025-09-19T15:59:07 IST" name="Login" finished-at="2025-09-19T15:59:18 IST" duration-ms="10459" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Login -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:testCases.TC_Login_01@1d470d0]" started-at="2025-09-19T15:59:18 IST" name="teardown" finished-at="2025-09-19T15:59:20 IST" duration-ms="2394" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- teardown -->
-      </class> <!-- testCases.TC_Login_01 -->
-    </test> <!-- FirefoxTest -->
-    <test started-at="2025-09-19T15:58:55 IST" name="EdgeTest" finished-at="2025-09-19T16:00:32 IST" duration-ms="97816">
-      <class name="testCases.TC_Addclient_01">
-        <test-method is-config="true" signature="setup(java.lang.String,java.lang.String)[pri:0, instance:testCases.TC_Addclient_01@5911e990]" started-at="2025-09-19T15:59:53 IST" name="setup" finished-at="2025-09-19T15:59:57 IST" duration-ms="3694" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Linux]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[edge]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method signature="createClients()[pri:0, instance:testCases.TC_Addclient_01@5911e990]" started-at="2025-09-19T15:59:57 IST" name="createClients" finished-at="2025-09-19T16:00:32 IST" duration-ms="34877" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- createClients -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:testCases.TC_Addclient_01@5911e990]" started-at="2025-09-19T16:00:32 IST" name="teardown" finished-at="2025-09-19T16:00:32 IST" duration-ms="407" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- teardown -->
-      </class> <!-- testCases.TC_Addclient_01 -->
-      <class name="testCases.TC_Login_01">
-        <test-method is-config="true" signature="setup(java.lang.String,java.lang.String)[pri:0, instance:testCases.TC_Login_01@2002348]" started-at="2025-09-19T15:58:55 IST" name="setup" finished-at="2025-09-19T15:59:02 IST" duration-ms="7090" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Linux]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[edge]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method signature="Login()[pri:0, instance:testCases.TC_Login_01@2002348]" started-at="2025-09-19T15:59:02 IST" name="Login" finished-at="2025-09-19T15:59:53 IST" duration-ms="50694" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Login -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:testCases.TC_Login_01@2002348]" started-at="2025-09-19T15:59:53 IST" name="teardown" finished-at="2025-09-19T15:59:53 IST" duration-ms="789" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- teardown -->
-      </class> <!-- testCases.TC_Login_01 -->
-    </test> <!-- EdgeTest -->
-    <test started-at="2025-09-19T15:58:55 IST" name="ChromeTest" finished-at="2025-09-19T16:00:40 IST" duration-ms="105839">
-      <class name="testCases.TC_AddUser_01">
-        <test-method is-config="true" signature="setup(java.lang.String,java.lang.String)[pri:0, instance:testCases.TC_AddUser_01@7b84fcf8]" started-at="2025-09-19T15:59:54 IST" name="setup" finished-at="2025-09-19T15:59:58 IST" duration-ms="4295" status="PASS">
+        <test-method is-config="true" signature="setup(java.lang.String,java.lang.String)[pri:0, instance:testCases.TC_Login_01@1cdc4c27]" started-at="2025-09-25T15:34:33 IST" name="setup" finished-at="2025-09-25T15:34:35 IST" duration-ms="2498" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -121,16 +29,14 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="createUser()[pri:0, instance:testCases.TC_AddUser_01@7b84fcf8]" started-at="2025-09-19T15:59:58 IST" name="createUser" finished-at="2025-09-19T16:00:40 IST" duration-ms="42180" status="FAIL">
-          <exception class="java.lang.AssertionError">
+        <test-method signature="Login()[pri:0, instance:testCases.TC_Login_01@1cdc4c27]" started-at="2025-09-25T15:34:35 IST" name="Login" finished-at="2025-09-25T15:34:35 IST" duration-ms="33" status="FAIL">
+          <exception class="java.lang.IllegalArgumentException">
             <message>
-              <![CDATA[null]]>
+              <![CDATA[Environment not specified. Pass it via -Denv=<dev|qa|prod>]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: null
-at org.testng.Assert.fail(Assert.java:111)
-at org.testng.Assert.fail(Assert.java:116)
-at testCases.TC_AddUser_01.createUser(TC_AddUser_01.java:67)
+              <![CDATA[java.lang.IllegalArgumentException: Environment not specified. Pass it via -Denv=<dev|qa|prod>
+at testCases.TC_Login_01.Login(TC_Login_01.java:20)
 at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
@@ -153,37 +59,11 @@ at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecut
 at java.base/java.lang.Thread.run(Thread.java:1583)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- createUser -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:testCases.TC_AddUser_01@7b84fcf8]" started-at="2025-09-19T16:00:40 IST" name="teardown" finished-at="2025-09-19T16:00:40 IST" duration-ms="373" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- teardown -->
-      </class> <!-- testCases.TC_AddUser_01 -->
-      <class name="testCases.TC_Login_01">
-        <test-method is-config="true" signature="setup(java.lang.String,java.lang.String)[pri:0, instance:testCases.TC_Login_01@5d9b7a8a]" started-at="2025-09-19T15:58:55 IST" name="setup" finished-at="2025-09-19T15:59:03 IST" duration-ms="8111" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Linux]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[chrome]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method signature="Login()[pri:0, instance:testCases.TC_Login_01@5d9b7a8a]" started-at="2025-09-19T15:59:03 IST" name="Login" finished-at="2025-09-19T15:59:53 IST" duration-ms="49765" status="PASS">
+          </exception> <!-- java.lang.IllegalArgumentException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Login -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:testCases.TC_Login_01@5d9b7a8a]" started-at="2025-09-19T15:59:53 IST" name="teardown" finished-at="2025-09-19T15:59:54 IST" duration-ms="852" status="PASS">
+        <test-method is-config="true" signature="teardown()[pri:0, instance:testCases.TC_Login_01@1cdc4c27]" started-at="2025-09-25T15:34:35 IST" name="teardown" finished-at="2025-09-25T15:34:36 IST" duration-ms="112" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
